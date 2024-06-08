@@ -13,18 +13,12 @@
 
 <script>
 export default {
-    computed: {
-        users() {
-            return this.$store.state.users;
-        }
-    },
-    methods: {
-        deleteUser(id) {
-            this.$store.dispatch('deleteUser', id);
-        }
-    },
     created() {
-        this.$store.dispatch('fetchUsers');
+        if (this.$store) {
+            this.$store.dispatch('fetchUsers')
+        } else {
+            console.error('Store is not available')
+        }
     }
-};
+}
 </script>
