@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.db = void 0;
 
-var _app = _interopRequireDefault(require("firebase/app"));
+var _app = _interopRequireDefault(require("firebase/compat/app"));
 
-require("firebase/firestore");
+require("firebase/compat/firestore");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
